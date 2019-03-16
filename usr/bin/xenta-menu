@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 clear
 figlet "Xenta Menu"
-echo "                                  Authors: Xenta OS Linux"
-echo "______________________________________________Versi 1.0.0"
+echo " Aplikasi Menu Launcher Xenta OS Console Edisi."
+echo "                             Authors: Xenta OS Linux"
+echo "_________________________________________Versi 1.0.1"
 echo ""
 PS3='>>  '
 options=("Accessories" "Graphics" "Internet" "Multimedia" "Office" "Programing" "Administration" "Quit" )
