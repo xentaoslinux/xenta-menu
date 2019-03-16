@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+clear
+figlet "Xenta Menu"
+echo "                                  Authors: Xenta OS Linux"
+echo "______________________________________________Versi 1.0.0"
+echo ""
+PS3='>>  '
+options=("Accessories" "Graphics" "Internet" "Multimedia" "Office" "Programing" "Administration" "Quit" )
+select opt in "${options[@]}"
+do
+   case $opt in
+           "Accessories")
+                echo "Menu Accessories :"
+                PS3='>> '
+                options=("BC - Calculator" "Nano - Text Editor" "Back to Menu...")
+                select opt in "${options[@]}"
+                     do
+                        case $opt in
+                                 "BC - Calculator")
+                                  bc
+                                  ;;
+                                  "Nano - Text Editor")
+                                  nano
+                                  ;;
+                                  "Back to Menu...")
+                                  break
+                                  ;;
+                                 *) echo "Aplikasi tidak ditemukan..."
+                       esac
+                     done
+                ;;
+           "Graphics")
+                echo "OK Test"
+                ;;
+           "Internet")
+                lynx
+                ;;
+           "Multimedia")
+                echo "OK Test"
+                ;;
+           "Office")
+                echo "Ok Test"
+                ;;
+           "Programing")
+                echo "OK Test"
+                ;;
+
+           "Administration")
+                echo "OK Test"
+                ;;
+           "Quit")
+                break
+                ;;
+          *) echo "Pilihan  tidak ditemukan";;
+    esac
+done
