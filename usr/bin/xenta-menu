@@ -36,18 +36,24 @@ do
            "Internet")
                 echo "Menu Internet :"
                 PS3='>> '
-                options=("Lynx - CLI Internet Browser" "FTP - File Transfer Protokol" "SFTP - Secure File Transfer Protokol" "Back to Menu...")
+                options=("Lynx - CLI Internet Browser" "FTP - File Transfer" "SFTP - Secure File Transfer" "SSH - Secure Shell" "Wget - Downloader" "Back to Menu...")
                 select opt in "${options[@]}"
                      do
                         case $opt in
                                  "Lynx - CLI Internet Browser")
                                   lynx https://www.google.com
                                   ;;
-                                  "FTP - File Transfer Protokol")
+                                  "FTP - File Transfer")
                                   ftp -h
                                   ;;
-                                  "SFTP - Secure File Transfer Protokol")
+                                  "SFTP - Secure File Transfer")
                                   sftp -h
+                                  ;;
+                                  "SSH - Secure Shell")
+                                  ssh -h
+                                  ;;
+                                  "Wget - Downloader")
+                                  wget
                                   ;;
                                   "Back to Menu...")
                                   break
