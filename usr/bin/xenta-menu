@@ -34,7 +34,27 @@ do
                 echo "OK Test"
                 ;;
            "Internet")
-                lynx
+                echo "Menu Internet :"
+                PS3='>> '
+                options=("Lynx - CLI Internet Browser" "FTP - File Transfer Protokol" "SFTP - Secure File Transfer Protokol" "Back to Menu...")
+                select opt in "${options[@]}"
+                     do
+                        case $opt in
+                                 "Lynx - CLI Internet Browser")
+                                  lynx https://www.google.com
+                                  ;;
+                                  "FTP - File Transfer Protokol")
+                                  ftp -h
+                                  ;;
+                                  "SFTP - Secure File Transfer Protokol")
+                                  sftp -h
+                                  ;;
+                                  "Back to Menu...")
+                                  break
+                                  ;;
+                                 *) echo "Aplikasi tidak ditemukan..."
+                       esac
+                     done
                 ;;
            "Multimedia")
                 echo "OK Test"
