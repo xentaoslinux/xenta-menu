@@ -13,12 +13,15 @@ do
            "Accessories")
                 echo "Menu Accessories :"
                 PS3='>> '
-                options=("BC - Calculator" "Nano - Text Editor" "Tar - Archiver" "Back to Menu...")
+                options=("BC - Calculator" "Man - Help Command" "Nano - Text Editor" "Tar - Archiver" "Back to Menu...")
                 select opt in "${options[@]}"
                      do
                         case $opt in
                                  "BC - Calculator")
                                   bc
+                                  ;;
+                                  "Man - Help Command")
+                                  man
                                   ;;
                                   "Nano - Text Editor")
                                   nano
